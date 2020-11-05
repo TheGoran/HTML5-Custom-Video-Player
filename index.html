@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>Custom Video Player</h1>
-    <video src="videos/streetperformers.mp4" id="video" class="screen" poster="img/play.png"></video>
+    <video onloadstart="this.volume=0.2" src="videos/streetperformers.mp4" id="video" class="screen" poster="img/play.png"></video>
     <div class="controls">
         <button class="btn" id="play">
             <i class="fa fa-play fa-2x"></i>
