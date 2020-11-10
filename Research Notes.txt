@@ -1,0 +1,21 @@
+1.Make Volume slider with Bars deisgn - done
+
+2.Make the video beginning to show as background instead of the black color or so.
+        After some research of how to make  the video element background loading the first video frame when video loaded.
+        Discovered that it can be done like this:
+                <video  src="videos/streetperformers.mp4#t-0.1" id="video" class="screen" poster="img/play.png"></video>
+        However, that hides the  Poster(play.png) button on start, and  apparently has compatibility issues on Apple devices where something show and something doesnt etc.
+        So for that sake
+
+3. Make the video Seek(progress) Bar shows preview of the frame at the point the mouse is hovering, same like on youtube.
+   From the so far research, it seems the best way to achieve this without library is to use the CANVAS API for pulling the frame shots.
+   Then will have to figure out how to position that above the mouse pointer, when it is above certain point on the Seek(progress) Bar.
+   My initial guess is to do it in Tooltip style or so...will see, lets just make it pulls the frame shots first .
+  
+
+  Ok this is getting a bit tricky, have to do some deeper research.
+
+  
+4.  Add keyboard(Arrrow) controls for the Volume and scrolling through the video. 
+
+5. Add Full Screen  button/functionality.

@@ -3,6 +3,9 @@ const play = document.getElementById('play');
 const stop = document.getElementById('stop');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
+//Canvas
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 
 //Play and Pause Video
 function toggleVideoStatus() {
@@ -63,4 +66,16 @@ play.addEventListener('click', toggleVideoStatus);
 
 stop.addEventListener('click', stopVideo);
 
+//Canvas Update
+//Find mouse exact position on progress bar
+
+function updateCanvas(e) {
+  video.currentTime = (
+    ((e.clientX - e.target.offsetLeft) / e.target.clientWidth) *
+    video.duration
+  ).toFixed(2);
+  ctx.drawImage(video, 0, 0);
+}
 progress.addEventListener('change', setVideoProgress);
+//Canvas  events
+progress.addEventListener('mousemove', updateCanvas);
